@@ -11,9 +11,7 @@ export default function () {
     }
 
     if (file.isStream()) {
-      callback(
-        new PluginError("gulp-svgo", "Streaming is not supported"),
-      );
+      callback(new PluginError("gulp-svgo", "Streaming is not supported"));
       return;
     }
 
@@ -25,7 +23,7 @@ export default function () {
         this.push(file);
         callback();
       } catch (error) {
-        if (error.name === 'SvgoParserError') {
+        if (error.name === "SvgoParserError") {
           callback(new PluginError("gulp-svgo", error.toString()));
         } else {
           callback(new PluginError("gulp-svgo", error.message));
