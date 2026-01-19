@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-$ npm install github:pioug/gulp-svgo#4.0.0
+$ npm i github:shim128/gulp-svgo
 ```
 
 ### Example
@@ -12,10 +12,7 @@ $ npm install github:pioug/gulp-svgo#4.0.0
 const gulp = require("gulp");
 const svgo = require("gulp-svgo");
 
-gulp
-  .src("example.svg")
-  .pipe(svgo())
-  .pipe(gulp.dest("build"));
+gulp.src("example.svg").pipe(svgo()).pipe(gulp.dest("build"));
 ```
 
 - See https://github.com/svgo/svgo for more minification options
